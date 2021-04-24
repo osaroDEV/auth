@@ -1,4 +1,6 @@
 import React from "react";
+import { MdEmail } from "react-icons/md";
+import { RiLockPasswordFill } from "react-icons/ri";
 
 const Login = (props) => {
   const {
@@ -16,28 +18,43 @@ const Login = (props) => {
   return (
     <section className="form-container">
       <div class="form-control">
-        <img class="logo" src="./tab-logo.png" alt="logo" />
         <div class="main-heading">
-          <h2>Lorem App</h2>
+          {hasAccount ? (
+            <h1>Login to osaroDEV</h1>
+          ) : (
+            <h1>Sign up to osaroDEV</h1>
+          )}
         </div>
-        <input
-          className="user"
-          type="text"
-          autoFocus
-          required
-          value={email}
-          placeholder="email"
-          onChange={(e) => setEmail(e.target.value)}
-        />
+        <label htmlFor="name">Name</label>
+        <div className="input-container">
+          <input
+            className="user"
+            type="text"
+            required
+            value={email}
+            placeholder="email"
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <span className="icon">
+            <MdEmail />
+          </span>
+        </div>
+
         <p>{emailError}</p>
-        <input
-          className="user"
-          type="password"
-          required
-          value={password}
-          placeholder="password"
-          onChange={(e) => setPassword(e.target.value)}
-        />
+        <label htmlFor="password">Password</label>
+        <div className="input-container">
+          <input
+            className="user"
+            type="password"
+            required
+            value={password}
+            placeholder="password"
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <span className="icon">
+            <RiLockPasswordFill />
+          </span>
+        </div>
         <p>{passwordError}</p>
         <div>
           {hasAccount ? (
@@ -47,7 +64,12 @@ const Login = (props) => {
               </button>
               <p className="text-align-center">
                 Don't have an account?{" "}
-                <span onClick={() => setHasAccount(!hasAccount)}>Sign Up</span>
+                <span
+                  className="alter"
+                  onClick={() => setHasAccount(!hasAccount)}
+                >
+                  <span>&#x1F449;</span>Sign Up
+                </span>
               </p>
             </>
           ) : (
@@ -57,7 +79,12 @@ const Login = (props) => {
               </button>
               <p className="text-align-center">
                 Have an account?{" "}
-                <span onClick={() => setHasAccount(!hasAccount)}>Sign In</span>
+                <span
+                  className="alter"
+                  onClick={() => setHasAccount(!hasAccount)}
+                >
+                  <span>&#x1F449;</span>Sign In
+                </span>
               </p>
             </>
           )}
