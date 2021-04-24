@@ -4,6 +4,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: url('./images/vac.jpg');
+  background-size: cover;
+  /* background-color: rgba(197, 158, 158, 0.1); */
 }
 
 * {
@@ -13,30 +16,39 @@ body {
 }
 
 .form-container {
-  background-color: #e5e5e5;
+  /* background-color: #442b72; */
+  background-color: #fff;
+  /* color: rgb(238, 227, 227); */
   display: flex;
   justify-content: center;
   flex-direction: column;
   min-width: 320px;
-  height: 90vh;
+  min-height: 70vh;
   /* margin-top: 1em;
   margin-right: 3em; */
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 5px 20px 10px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 }
 
+h1 {
+  font-size: 1.5em;
+}
 
 .logo {
   width: 120px;
   height: auto;
   margin: 2em auto 1em auto;
 }
-span {
-  color: red;
+.alter {
+  color: #8a6bf0;
   font-weight: bold;
 }
 
-.form-control * {
+.alter:hover {
+  cursor: pointer;
+}
+
+.alter span .form-control * {
   display: block;
 }
 
@@ -48,61 +60,69 @@ span {
 
 .main-heading {
   text-align: center;
-  margin-bottom: 5em;
+  margin: 0 0 1em 0;
 }
 
-.user, .next, .create {
+label {
+  margin-bottom: 0.5em;
+  font-size: 0.75em;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.user,
+.next,
+.create {
   margin-bottom: 1.75em;
 }
 
-input {
-  width: 100%;
-  height: 3em;
-  border-top: none;
-  border-right: none;
-  border-left: none;
-}
-
-input, .next, .create {
+input,
+.next,
+.create {
   outline: 0;
 }
 
-input {
-  color: #000;
-  font-size: 1.1rem;
-  padding-left: 0.5em;
+button {
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
 }
 
 ::placeholder {
   color: rgba(0, 0, 0, 0.3);
   font-size: 1.1rem;
-  padding-left: 0.5em;
 }
 
-.next, .create {
+.next,
+.create {
   width: 100%;
-  border-radius: 1em;
   padding: 0.25em 0;
   font-size: 1.3rem;
   cursor: pointer;
+  background: #8a6bf0;
+  color: #fff;
+  border: 1px solid #8a6bf0;
 }
 
-.next {
-  background: #188fff;
-  color: #fff;
-  border: 1px solid #188fff;
+input {
+  border-color: none;
+  width: 90%;
+  height: 2.5em;
+  transition: width 0.3s ease-in-out;
+  color: #000;
+  font-size: 1.1rem;
+  padding-left: 2.5em;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+
+input:focus {
+  border: 2px solid #8a6bf0;
+  background: #fedf96;
+  width: 100%;
 }
 
 .next:active {
   background: blue;
   border: blue;
-}
-
-.create {
-  color: blue;
-  border: 1px solid blue;
-  background: #fff;
-  margin-top: 1em;
 }
 
 .box-link {
@@ -126,5 +146,32 @@ input {
   color: white;
 } */
 
-/* hero */
+.input-container .icon {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 2em;
+  position: absolute;
+  top: 0.15em;
+  left: 0.2em;
+}
 
+.input-container {
+  /* border: 2px dotted; */
+  position: relative;
+}
+
+.icon {
+  animation: updown 2s infinite;
+}
+
+@keyframes updown {
+  33% {
+    transform: translateY(0);
+  }
+  66% {
+    transform: translateY(-2.5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+/* hero */
