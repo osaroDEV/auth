@@ -1,3 +1,52 @@
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  
+}
+
+.logo {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+}
+
+.check {
+  font-size: 5em;
+}
+
+.center * {
+  text-align: center;
+}
+
+.logout {
+  padding: 0.5em 0;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: #fff;
+  border: 1px solid red;
+  outline: none;
+  border-radius: 0.3em;
+  box-shadow: 3px 3px 5px rgba(255, 255, 255, 0.3);
+  margin-bottom: 1em;
+  width: 100px; 
+  background: red; 
+  position: fixed;
+  bottom: 2em; 
+  transition: all 0.15s ease-in-out;
+}
+
+.logout:hover {
+  background: #fff;
+  color: red;
+}
+
+.logout:active {
+  box-shadow: 0 0 0 3px lightskyblue;
+}
+
 
 
 	
