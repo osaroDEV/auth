@@ -1,23 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { FiCheckCircle } from 'react-icons/fi';
+// import { Link } from 'react-router-dom';
+import './Hero.css';
 
 export default function Hero({ handleLogout }) {
-  return (
-    <section >
-      <h1 style={{fontSize: '3em', textAlign: 'center', paddingTop: '2em'}}>You are logged in</h1>
-        <button
-          style={{
-            backgroundColor: "red",
-            padding: "0.5em 1em",
-            border: "1px solid red",
-            color: "#fff",
-            fontSize: "2em",
-            position: "absolute",
-            bottom: "0",
-          }}
-          onClick={handleLogout}
-        >
-          Logout
-        </button>
-    </section>
-  );
+
+    return (
+      <section className='center'>
+        <div className="check">
+          <FiCheckCircle />
+        </div>
+        <div className="main">
+          <div className="main-heading logo">
+            <h1 className='underline'>Portal</h1>
+          </div>
+          <h1>Congratulations!</h1>
+          <h3>You are now successfully authenticated.</h3>
+          <h3>You can visit your dashboard.</h3>
+          <button className='logout' onClick={handleLogout}>Logout</button>
+        </div>
+        
+      </section>
+    );
 }
+

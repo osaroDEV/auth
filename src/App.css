@@ -4,7 +4,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url('./images/vac.jpg');
+  background: url("./images/vac.jpg");
   background-size: cover;
   /* background-color: rgba(197, 158, 158, 0.1); */
 }
@@ -23,7 +23,7 @@ body {
   justify-content: center;
   flex-direction: column;
   min-width: 320px;
-  min-height: 70vh;
+  min-height: 80vh;
   /* margin-top: 1em;
   margin-right: 3em; */
   box-shadow: 5px 5px 20px 10px rgba(0, 0, 0, 0.2);
@@ -48,9 +48,9 @@ h1 {
   cursor: pointer;
 }
 
-.alter span .form-control * {
+/* .alter span .form-control * {
   display: block;
-}
+} */
 
 .form-control {
   padding: 0 1.5em;
@@ -63,95 +63,85 @@ h1 {
   margin: 0 0 1em 0;
 }
 
-label {
-  margin-bottom: 0.5em;
-  font-size: 0.75em;
-  color: rgba(0, 0, 0, 0.7);
-}
-
-.user,
-.next,
-.create {
-  margin-bottom: 1.75em;
-}
-
-input,
-.next,
-.create {
-  outline: 0;
-}
-
-button {
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
-}
-
 ::placeholder {
   color: rgba(0, 0, 0, 0.3);
   font-size: 1.1rem;
 }
 
-.next,
-.create {
+.login {
   width: 100%;
-  padding: 0.25em 0;
+  padding: 0.5em 0;
   font-size: 1.3rem;
   cursor: pointer;
   background: #8a6bf0;
   color: #fff;
   border: 1px solid #8a6bf0;
+  outline: none;
+  border-radius: 0.3em;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1em;
+  transition: all 0.15s ease-in-out;
+}
+
+.login:hover {
+  background: #fff;
+  color: #8a6bf0;
+}
+
+.login:active {
+  box-shadow: 0 0 0 3px lightskyblue;
 }
 
 input {
-  border-color: none;
-  width: 90%;
+  border-bottom: 1px solid;
+  width: 95%;
   height: 2.5em;
-  transition: width 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   color: #000;
   font-size: 1.1rem;
-  padding-left: 2.5em;
+  padding-left: 2em;
   border-top: none;
   border-right: none;
   border-left: none;
+  margin: 0 auto;
+  display: block;
+  outline: none;
+}
+
+.email {
+  margin-top: 2em;
 }
 
 input:focus {
-  border: 2px solid #8a6bf0;
-  background: #fedf96;
+  border-bottom: 1px solid red;
   width: 100%;
 }
 
-.next:active {
-  background: blue;
-  border: blue;
+.message-email {
+  margin-bottom: 6em;
 }
 
-.box-link {
-  height: 20px;
-  margin-bottom: 3em;
+.message-email,
+.message-password {
+  color: red;
+  font-size: 0.55em;
+  margin-left: 1em;
+  margin-top: 0.2em;
+}
+.message-password {
+  margin-bottom: 4em;
 }
 
 .text-align-center {
   text-align: center;
 }
 
-/* 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-} */
-
 .input-container .icon {
   color: rgba(0, 0, 0, 0.3);
-  font-size: 2em;
+  font-size: 1.5em;
   position: absolute;
-  top: 0.15em;
-  left: 0.2em;
+  top: 0.3em;
+  left: 0.3em;
 }
 
 .input-container {
@@ -173,5 +163,10 @@ input:focus {
   100% {
     transform: translateY(0px);
   }
+}
+
+.underline {
+  /* border: 5px solid #8a6bf0; */
+  text-decoration: underline overline;
 }
 /* hero */

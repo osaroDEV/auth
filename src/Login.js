@@ -20,15 +20,18 @@ const Login = (props) => {
       <div class="form-control">
         <div class="main-heading">
           {hasAccount ? (
-            <h1>Login to osaroDEV</h1>
+            <h1>
+              Log in to <span class="underline">Portal</span>
+            </h1>
           ) : (
-            <h1>Sign up to osaroDEV</h1>
+            <h1>
+              Sign up to <span class="underline">Portal</span>
+            </h1>
           )}
         </div>
-        <label htmlFor="name">Name</label>
         <div className="input-container">
           <input
-            className="user"
+            className="email"
             type="text"
             required
             value={email}
@@ -38,13 +41,12 @@ const Login = (props) => {
           <span className="icon">
             <MdEmail />
           </span>
+          <p className="message-email">{emailError}</p>
         </div>
 
-        <p>{emailError}</p>
-        <label htmlFor="password">Password</label>
         <div className="input-container">
           <input
-            className="user"
+            className="password"
             type="password"
             required
             value={password}
@@ -54,12 +56,13 @@ const Login = (props) => {
           <span className="icon">
             <RiLockPasswordFill />
           </span>
+          <p className="message-password">{passwordError}</p>
         </div>
-        <p>{passwordError}</p>
+
         <div>
           {hasAccount ? (
             <>
-              <button className="next" onClick={handleLogin}>
+              <button className="login" onClick={handleLogin}>
                 Sign In
               </button>
               <p className="text-align-center">
@@ -74,7 +77,7 @@ const Login = (props) => {
             </>
           ) : (
             <>
-              <button className="create" onClick={handleSignup}>
+              <button className="login" onClick={handleSignup}>
                 Sign Up
               </button>
               <p className="text-align-center">
