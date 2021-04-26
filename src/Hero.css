@@ -4,7 +4,6 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  
 }
 
 .logo {
@@ -30,7 +29,7 @@
   outline: none;
   border-radius: 0.3em;
   box-shadow: 3px 3px 5px rgba(255, 255, 255, 0.3);
-  margin-bottom: 1em;
+  margin-bottom: 2.5em;
   width: 100px; 
   background: red; 
   position: fixed;
@@ -44,7 +43,7 @@
 }
 
 .logout:active {
-  box-shadow: 0 0 0 3px lightskyblue;
+  box-shadow: 0 0 0 5px lightskyblue;
 }
 
 
